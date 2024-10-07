@@ -418,7 +418,7 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
 
     //assertions
 
-    CHECK_EQUAL(0, status);
+    CHECK_EQUAL(1, status);
     CHECK_EQUAL(nullptr, obj.dcc_param_2a);
     CHECK_EQUAL(node, obj.node_aewb);
     CHECK_EQUAL(ae_awb_result_ptr, obj.ae_awb_result);
