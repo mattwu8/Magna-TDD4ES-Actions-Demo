@@ -12,6 +12,7 @@ CPPFLAGS += -I../test_mocks	# Add flag to include mocking headers
 CPPFLAGS += -I..			# Add flag to include parent directory
 # CPPFLAGS += -I../../../
 CPPUFLAGS += -DUNIT_TEST	# Test flag (to trigger certain preprocessor directives)
+CPPFLAGS += --coverage -O0	# Add flags for code coverage
 
 # Compiler. Use g++ which can compile both C and C++ files
 CXX = g++
@@ -32,3 +33,7 @@ $(TARGET): $(SRCS)
 # Clean target
 clean:
 	rm -f $(TARGET)
+	rm -f *.gcda
+	rm -f *.gcno
+	rm -f *.info
+	rm -r html/
