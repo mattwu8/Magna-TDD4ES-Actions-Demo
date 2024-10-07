@@ -1,0 +1,5 @@
+all_tests
+*.gcda
+*.gcno
+*.info
+tests/html
