@@ -408,7 +408,7 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
     mock().expectOneCall("vxSetNodeTarget").withParameter("node",node).ignoreOtherParameters();
     
     //expects that node = node
-    mock().expectOneCall("tivxSetNodeParameterNumBufByIndex").withParameter("node",aewb_config_ptr).ignoreOtherParameters();
+    mock().expectOneCall("tivxSetNodeParameterNumBufByIndex").withParameter("node",node).ignoreOtherParameters();
     
     //expects that ref = (vx_reference)node
     mock().expectOneCall("vxSetReferenceName").withParameter("ref", (vx_reference)node).ignoreOtherParameters();
