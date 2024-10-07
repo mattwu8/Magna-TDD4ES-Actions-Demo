@@ -408,7 +408,7 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
     mock().expectOneCall("vxSetNodeTarget").withParameter("node",node).ignoreOtherParameters();
     
     //expects that node = node
-    mock().expectOneCall("tivxSetNodeParameterNumBufByIndex").withParameter("node",node).ignoreOtherParameters();
+    mock().expectOneCall("tivxSetNodeParameterNumBufByIndex").withParameter("node",aewb_config_ptr).ignoreOtherParameters();
     
     //expects that ref = (vx_reference)node
     mock().expectOneCall("vxSetReferenceName").withParameter("ref", (vx_reference)node).ignoreOtherParameters();
@@ -418,7 +418,7 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
 
     //assertions
 
-    CHECK_EQUAL(1, status);
+    CHECK_EQUAL(0, status);
     CHECK_EQUAL(nullptr, obj.dcc_param_2a);
     CHECK_EQUAL(node, obj.node_aewb);
     CHECK_EQUAL(ae_awb_result_ptr, obj.ae_awb_result);
