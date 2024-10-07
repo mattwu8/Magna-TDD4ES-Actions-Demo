@@ -32,23 +32,22 @@ jobs:
         lcov --directory . --capture --output-file coverage.info
         genhtml coverage.info --output-directory html
 
-    # - name: Upload coverage report
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: coverage-report
-    #     path: TDD4ES/tests/html/
+    - name: Upload coverage report
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: TDD4ES/tests/html/
 
-    - name: Deploy to GitHub Pages
-      run: |
-        git config --local user.name "github-actions"
-        git config --local user.email "github-actions@github.com"
-        # Create or checkout gh-pages branch
-        git checkout -B gh-pages
-        # Remove old report and copy the new one
-        rm -rf *
-        cp -R TDD4ES/tests/html/ .
-        git add .
-        git commit -m "Deploy coverage report" || echo "No changes to commit"
-        git push --force origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Deploy to GitHub Pages
+    #   run: |
+    #     git config --local user.name "github-actions"
+    #     git config --local user.email "github-actions@github.com"
+    #     # Create or checkout gh-pages branch
+    #     git checkout -B gh-pages
+    #     # Remove old report and copy the new one
+    #     rm -rf *
+    #     cp -R TDD4ES/tests/html/ .
+    #     git add .
+    #     git commit -m "Deploy coverage report" || echo "No changes to commit"
+    #     git push --force origin gh-pages
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
