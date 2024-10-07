@@ -1,0 +1,27 @@
+name: ActionsDemo
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc g++ make cpputest
+  
+    - name: Make CppUTest tests
+      run: make -C TDD4ES/tests -B
+
+    - name: Run CppUTests
+      working-directory: TDD4ES/tests
+      run: |
+        ./all_tests
+      continue-on-error: false
