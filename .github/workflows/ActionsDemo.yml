@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: coverage-report
-        path: TDD4ES/tests/html/index.html
+        path: TDD4ES/tests/html/
 
     - name: Deploy to GitHub Pages
       run: |
@@ -46,7 +46,7 @@ jobs:
         git checkout -B gh-pages
         # Remove old report and copy the new one
         rm -rf *
-        cp -R html/* .
+        cp -R TDD4ES/tests/html/* .
         git add .
         git commit -m "Deploy coverage report" || echo "No changes to commit"
         git push --force origin gh-pages
