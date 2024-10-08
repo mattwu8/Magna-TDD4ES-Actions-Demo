@@ -47,6 +47,9 @@ jobs:
       with:
         folder: TDD4ES/tests/html/
 
+    - name: Copy index.html
+      run: cp TDD4ES/tests/index_example.html TDD4ES/tests/html/index.html
+
     # - name: Deploy to GitHub Pages
     #   run: |
     #     git config --local user.name "github-actions"

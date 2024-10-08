@@ -6,7 +6,6 @@
 
     <!-- Task to convert XML to HTML -->
     <target name="convert">
-        <!-- Create the output directory for HTML files if it doesn't exist -->
         <mkdir dir="${html.dir}"/>
         
         <!-- Use the junitreport task to transform the XML to HTML -->
