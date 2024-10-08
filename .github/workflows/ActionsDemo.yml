@@ -15,19 +15,26 @@ jobs:
     - name: Set up dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc g++ make cpputest lcov
+        sudo apt-get install -y gcc g++ make cpputest lcov ant
   
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
-    - name: Run CppUTests
-      working-directory: TDD4ES/tests
+    - name: Create output directories
       run: |
-        mkdir -p html
-        mkdir -p xml
-        cd xml
+        mkdir -p TDD4ES/tests/html
+        mkdir -p TDD4ES/tests/xml
+
+    - name: Run CppUTests
+      working-directory: TDD4ES/tests/xml
+      run: |
         ../all_tests -c -vv -ojunit
       continue-on-error: false
+
+    - name: Generate test report
+      working-directory: TDD4ES/tests
+      run: |
+        ant convert
 
     - name: Generate coverage report
       working-directory: TDD4ES/tests
