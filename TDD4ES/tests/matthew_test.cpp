@@ -416,7 +416,7 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
     //calls function, stores status into status variable
     vx_status status = app_create_aewb(&obj, sensor_wdr_mode);
 
-    //assertions
+    //assertion
 
     CHECK_EQUAL(0, status);
     CHECK_EQUAL(nullptr, obj.dcc_param_2a);
