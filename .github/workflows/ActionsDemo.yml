@@ -23,14 +23,17 @@ jobs:
     - name: Run CppUTests
       working-directory: TDD4ES/tests
       run: |
-        ./all_tests
+        mkdir -p html
+        mkdir -p xml
+        cd xml
+        ../all_tests -c -vv -ojunit
       continue-on-error: false
 
     - name: Generate coverage report
       working-directory: TDD4ES/tests
       run: |
         lcov --directory . --capture --output-file coverage.info
-        genhtml coverage.info --output-directory html
+        genhtml coverage.info --output-directory html/coverage
 
     - name: Upload coverage report
       uses: JamesIves/github-pages-deploy-action@v4
