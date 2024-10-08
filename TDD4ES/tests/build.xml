@@ -1,0 +1,20 @@
+<project name="Convert JUnit XML to HTML" default="convert" basedir=".">
+    
+    <!-- Define properties for directories -->
+    <property name="xml.dir" value="./xml"/>
+    <property name="html.dir" value="./html"/>
+
+    <!-- Task to convert XML to HTML -->
+    <target name="convert">
+        <mkdir dir="${html.dir}"/>
+        
+        <!-- Use the junitreport task to transform the XML to HTML -->
+        <junitreport todir="${html.dir}">
+            <fileset dir="${xml.dir}">
+                <include name="*.xml"/>
+            </fileset>
+            <report format="frames" todir="${html.dir}/test_results"/>
+        </junitreport>
+    </target>
+
+</project>

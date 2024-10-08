@@ -15,22 +15,35 @@ jobs:
     - name: Set up dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc g++ make cpputest lcov
+        sudo apt-get install -y gcc g++ make cpputest lcov ant
   
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
+    - name: Create output directories
+      run: |
+        mkdir -p TDD4ES/tests/html
+        mkdir -p TDD4ES/tests/xml
+
     - name: Run CppUTests
+      working-directory: TDD4ES/tests/xml
+      run: |
+        ../all_tests -c -vv -ojunit
+      continue-on-error: false
+
+    - name: Generate test report
       working-directory: TDD4ES/tests
       run: |
-        ./all_tests
-      continue-on-error: false
+        ant convert
 
     - name: Generate coverage report
       working-directory: TDD4ES/tests
       run: |
         lcov --directory . --capture --output-file coverage.info
-        genhtml coverage.info --output-directory html
+        genhtml coverage.info --output-directory html/coverage
+
+    - name: Copy index.html
+      run: cp TDD4ES/tests/index_example.html TDD4ES/tests/html/index.html
 
     - name: Upload coverage report
       uses: JamesIves/github-pages-deploy-action@v4

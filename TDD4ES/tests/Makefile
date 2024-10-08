@@ -37,3 +37,4 @@ clean:
 	rm -f *.gcno
 	rm -f *.info
 	rm -r html/
+	rm -r xml/
