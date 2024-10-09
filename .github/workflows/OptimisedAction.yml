@@ -1,0 +1,27 @@
+name: OptimisedAction
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-cpputest:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Set up dependencies
+      run: |
+        cd cpputest/cpputest_build
+        autoreconf .. -i
+        ../configure
+        make
+        cd ../..
+    
+    - name: Start Tests
+      run: @echo "Starting tests"
+
+    
+    
