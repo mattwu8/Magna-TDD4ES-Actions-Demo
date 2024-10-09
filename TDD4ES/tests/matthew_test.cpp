@@ -424,6 +424,6 @@ TEST(app_create_aewb_test, appIssGetDCCBuff2ANotSucess)
     CHECK_EQUAL(node, obj.node_aewb);
     CHECK_EQUAL(ae_awb_result_ptr, obj.ae_awb_result);
     
-    //verify mock
+    //verify mocks
     mock().checkExpectations();
 }
