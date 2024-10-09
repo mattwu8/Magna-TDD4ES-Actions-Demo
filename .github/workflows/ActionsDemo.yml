@@ -50,23 +50,8 @@ jobs:
 
     - name: Copy index.html
       run: cp TDD4ES/tests/index_example.html TDD4ES/tests/html/index.html
-
+  
     - name: Upload coverage report
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: TDD4ES/tests/html/
-
-    - name: Deploy to GitHub Pages
-      run: |
-        git config --local user.name "github-actions"
-        git config --local user.email "github-actions@github.com"
-        # Create or checkout gh-pages branch
-        git checkout -B gh-pages
-        # Remove old report and copy the new one
-        rm -rf *
-        cp -R TDD4ES/tests/html/ .
-        git add .
-        git commit -m "Deploy coverage report" || echo "No changes committed"
-        git push --force origin gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
