@@ -21,7 +21,7 @@ jobs:
         cd ../..
     
     - name: Start Tests
-      run: @echo "Starting tests"
+      run: echo "Starting tests"
 
     
     
