@@ -1,11 +1,11 @@
 # If you installed CppUTest from apt, leave CPPUTEST_HOME as is, otherwise, change it to the path where you installed CppUTest
-CPPUTEST_HOME = ../../
-CPPFLAGS += -I$(CPPUTEST_HOME)/include
+CPPUTEST_HOME = ../../cpputest
+CPPFLAGS += -I$(CPPUTEST_HOME)/include/
 
 # CXXFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
 # CFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
 
-LD_LIBRARIES = -L$(CPPUTEST_HOME)/lib -lCppUTest -lCppUTestExt
+LD_LIBRARIES = -L$(CPPUTEST_HOME)/cpputest_build/lib -lCppUTest -lCppUTestExt
 
 # Flags
 CPPFLAGS += -I../test_mocks	# Add flag to include mocking headers
@@ -21,10 +21,10 @@ CXX = g++
 SRCS = all_tests.cpp
 
 # Add tests
-SRCS += matthew_test.cpp
+SRCS += ez_test.cpp
 
 # Output executable
-TARGET = all_tests.testcase
+TARGET = ez_test.testcase
 
 # Build target
 $(TARGET): $(SRCS)

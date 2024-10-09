@@ -40,7 +40,7 @@ jobs:
     - name: Run tests
       run: |
         echo "Running test cases"
-        ./TDD4ES/tests/all_tests.testcase
+        ./TDD4ES/tests/ez_test.testcase
       
 
     
