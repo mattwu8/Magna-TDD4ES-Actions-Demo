@@ -60,10 +60,6 @@ TEST(write_output_image_yuv422_8bit, FailOpenFile) {
     mock().checkExpectations();
 }
 
-TEST(write_output_image_yuv422_8bit, FailTest) {
-    FAIL("This test is not implemented yet");
-}
-
 //implementation of app_send_test_frame function
 
 vx_status app_send_test_frame(vx_node cap_node, tivx_raw_image raw_img)

@@ -26,12 +26,17 @@ jobs:
         mkdir -p TDD4ES/tests/xml
 
     - name: Run CppUTests
-      working-directory: TDD4ES/tests/xml
+      working-directory: TDD4ES/tests
       run: |
-        ../all_tests -c -vv -ojunit
+        ./all_tests -c -vv
       continue-on-error: true
 
     - name: Generate test report
+      working-directory: TDD4ES/tests/xml
+      run: |
+        ../all_tests -c -vv -ojunit
+
+    - name: Convert test report
       working-directory: TDD4ES/tests
       run: |
         ant convert
