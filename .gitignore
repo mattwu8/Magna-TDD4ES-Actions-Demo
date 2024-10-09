@@ -3,3 +3,5 @@ all_tests
 *.gcno
 *.info
 tests/html
+.vscode/
+*.testcase
