@@ -21,10 +21,10 @@ CXX = g++
 SRCS = all_tests.cpp
 
 # Add tests
-SRCS += ez_test.cpp
+SRCS += matthew_test.cpp
 
 # Output executable
-TARGET = ez_test.testcase
+TARGET = matthew_test.testcase
 
 # Build target
 $(TARGET): $(SRCS)
