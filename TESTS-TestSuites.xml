@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.001" timestamp="2024-10-09T22:09:20">
+  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.001" timestamp="2024-10-09T22:12:16">
     <properties>
 </properties>
 
     <testcase assertions="28" classname="app_create_aewb_test" file="matthew_test.cpp" line="366" name="appIssGetDCCBuff2ANotSucess" time="0.000">
 </testcase>
 
-    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="313" name="dcc_buff_size_Equal0" time="0.000">
+    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="313" name="dcc_buff_size_Equal0" time="0.001">
 </testcase>
 
-    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="249" name="FailureAtvxMapUserDataObject" time="0.001">
+    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="249" name="FailureAtvxMapUserDataObject" time="0.000">
 </testcase>
 
     <system-out />
@@ -18,7 +18,7 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T22:09:20">
+  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T22:12:16">
     <properties>
 </properties>
 
@@ -33,7 +33,7 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T22:09:20">
+  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T22:12:16">
     <properties>
 </properties>
 
