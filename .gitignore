@@ -4,3 +4,4 @@ all_tests
 *.info
 tests/html
 .vscode/
+*.testcase
