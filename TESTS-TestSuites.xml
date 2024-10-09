@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.000" timestamp="2024-10-09T21:44:37">
+    <properties>
+</properties>
+
+    <testcase assertions="28" classname="app_create_aewb_test" file="matthew_test.cpp" line="366" name="appIssGetDCCBuff2ANotSucess" time="0.000">
+</testcase>
+
+    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="313" name="dcc_buff_size_Equal0" time="0.000">
+</testcase>
+
+    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="249" name="FailureAtvxMapUserDataObject" time="0.000">
+</testcase>
+
+    <system-out />
+
+    <system-err />
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T21:44:37">
+    <properties>
+</properties>
+
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="97" name="Fail" time="0.000">
+</testcase>
+
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="84" name="Success" time="0.000">
+</testcase>
+
+    <system-out />
+
+    <system-err />
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T21:44:37">
+    <properties>
+</properties>
+
+    <testcase assertions="1" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="51" name="FailOpenFile" time="0.000">
+</testcase>
+
+    <testcase assertions="3" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="37" name="PassWriteFile" time="0.000">
+</testcase>
+
+    <system-out />
+
+    <system-err />
+
+  </testsuite>
+</testsuites>
