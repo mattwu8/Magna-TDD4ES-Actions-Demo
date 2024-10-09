@@ -12,8 +12,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     
-    - name: Set up dependencies
+    - name: Set up dependencies (If necessary)
       run: |
+        echo "EZ will add a condition that makes it not clone cpputest
+        if the folder exists"
         cd cpputest/cpputest_build
         autoreconf .. -i
         ../configure
@@ -21,7 +23,11 @@ jobs:
         cd ../..
     
     - name: Start Tests
-      run: echo "Starting tests"
+      run: |
+        echo "Starting tests"
+        cd TDD4ES/tests
+        make
+      
 
     
     
