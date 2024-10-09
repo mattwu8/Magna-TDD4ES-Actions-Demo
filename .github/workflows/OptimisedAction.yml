@@ -35,7 +35,12 @@ jobs:
     - name: Start Tests
       run: |
         echo "Starting tests"
-        make -C TDD4ES/tests -B
+        make -C TDD4ES/tests -f tmpMakefile.mk
+
+    - name: Run tests
+      run: |
+        echo "Running test cases"
+        ./TDD4ES/tests/all_tests.testcase
       
 
     
