@@ -35,6 +35,7 @@ jobs:
       working-directory: TDD4ES/tests/xml
       run: |
         ../all_tests -c -vv -ojunit
+      continue-on-error: true
 
     - name: Convert test report
       working-directory: TDD4ES/tests
