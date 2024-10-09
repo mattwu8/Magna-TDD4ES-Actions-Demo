@@ -65,7 +65,7 @@ jobs:
         rm -rf *
         cp -R TDD4ES/tests/html/ .
         git add .
-        git commit -m "Deploy coverage report" || echo "No changes to commit"
+        git commit -m "Deploy coverage report" || echo "No changes committed"
         git push --force origin gh-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
