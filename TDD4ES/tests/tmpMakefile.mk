@@ -24,7 +24,7 @@ SRCS = all_tests.cpp
 SRCS += matthew_test.cpp
 
 # Output executable
-TARGET = matthew_test.testcase
+TARGET = ez.testcase
 
 # Build target
 $(TARGET): $(SRCS)
