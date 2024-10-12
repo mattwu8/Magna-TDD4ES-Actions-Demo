@@ -43,7 +43,7 @@ TEST(write_output_image_yuv422_8bit, PassWriteFile)
     int result = write_output_image_yuv422_8bit((char*)file_name, test_image);
     CHECK_EQUAL(1024, result);
 
-    mock().checkExpectations();
+    mock().checkExpectations(); 
 
     //test
 }
